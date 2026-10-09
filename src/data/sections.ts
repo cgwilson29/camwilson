@@ -28,7 +28,7 @@ export const sections: Section[] = [
     body: 'Sun',
     tagline: 'Pharmacist · Public health officer · Explorer',
     paragraphs: [
-      "Hi, I'm Cam Wilson — a pharmacist and Commissioned Corps officer in the U.S. Public Health Service.",
+      "Hi, I'm Cam Wilson — a pharmacist and Lieutenant in the U.S. Public Health Service Commissioned Corps.",
       'When I am not working, you will find me behind the wheel, on two wheels, on the water, somewhere new on the map, or looking up at the night sky.',
       'Click any planet to explore a different part of my world.',
     ],
@@ -65,7 +65,7 @@ export const sections: Section[] = [
       'I have always loved cars — the engineering, the design, and the feeling of a great driving road.',
     ],
     highlightsTitle: 'Garage & favorites',
-    highlights: ['Current car: (add yours)', 'Dream car: (add yours)', 'Favorite drive: (add yours)'],
+    highlights: ['Current car: 2024 Chevrolet Silverado EV RST', 'Dream car: RestoMod 1972 Dodge Challenger R/T in Plum Crazy Purple', 'Favorite drive: Any roadtrip, especially into the mountains!'],
   },
   {
     id: 'motorcycles',
@@ -74,7 +74,7 @@ export const sections: Section[] = [
     tagline: 'Two wheels, fast orbits',
     paragraphs: ['Riding is my way to clear my head and connect with the road.'],
     highlightsTitle: 'Rides',
-    highlights: ['Current bike: (add yours)', 'Favorite route: (add yours)'],
+    highlights: ['Current bike: 2019 BMW S1000XR', 'Favorite route: San Juan Skyway from Durango to Ouray, Colorado'],
   },
   {
     id: 'kayaking',
@@ -83,7 +83,7 @@ export const sections: Section[] = [
     tagline: 'Paddling deep-blue waters',
     paragraphs: ['Some of my favorite days are spent on the water with a paddle in hand.'],
     highlightsTitle: 'Favorite waters',
-    highlights: ['(add a river, lake, or coastline)', '(add another)'],
+    highlights: ['Florida springs', 'Rainbow River'],
   },
   {
     id: 'travel',
@@ -94,7 +94,7 @@ export const sections: Section[] = [
       'Travel has taken me to places that changed how I see the world. Like Jupiter and its many moons, there is always another destination to explore.',
     ],
     highlightsTitle: 'Places I have been',
-    highlights: ['(add a country)', '(add a country)', '(add a country)'],
+    highlights: ['Ireland', 'Colombia', 'Spain', 'Dominican Republic', 'Canada', 'Aruba', ''],
   },
   {
     id: 'space',
@@ -106,9 +106,9 @@ export const sections: Section[] = [
     ],
     highlightsTitle: 'Favorites',
     highlights: [
-      'Favorite mission: (e.g., JWST, Voyager, Artemis)',
-      'Favorite object: (e.g., Saturn, the Orion Nebula)',
-      'Telescope / gear: (add yours)',
+      'Favorite mission: James-Webb Space Telescope',
+      'Favorite object: 40 Eridani System (the home of Vulcan)',
+      'Telescope / gear: Celestron AstroMaster 130 (it gets the job done!)',
     ],
     links: [{ label: 'NASA', href: 'https://www.nasa.gov/' }],
   },
