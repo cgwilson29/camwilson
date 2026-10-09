@@ -22,6 +22,16 @@ export function SectionContent({ section, headingLevel = 2 }: { section: Section
           </ul>
         </>
       )}
+      {section.extraLists?.map((list) => (
+        <section key={list.title}>
+          <h3>{list.title}</h3>
+          <ul>
+            {list.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
       {section.education && (
         <>
           <h3>Education</h3>

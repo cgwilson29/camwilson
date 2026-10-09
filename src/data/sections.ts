@@ -29,6 +29,8 @@ export interface Section {
   paragraphs: string[];
   highlightsTitle?: string;
   highlights?: string[];
+  /** Additional titled bullet lists shown after the highlights. */
+  extraLists?: { title: string; items: string[] }[];
   links?: { label: string; href: string }[];
   /** Listed newest first. */
   education?: EducationEntry[];
@@ -141,6 +143,12 @@ export const sections: Section[] = [
     ],
     highlightsTitle: 'Places I have been',
     highlights: ['Ireland', 'Colombia', 'Spain', 'Dominican Republic', 'Canada', 'Aruba', 'British Virgin Islands', 'St. Maarten', 'Bahamas'],
+    extraLists: [
+      {
+        title: 'Places I want to go',
+        items: ['Germany', 'Scotland', 'Scandinavia (all of them!)', "Eat-aly (it's what I will be doing there)", 'Australia', 'Japan'],
+      },
+    ],
   },
   {
     id: 'breweries',
