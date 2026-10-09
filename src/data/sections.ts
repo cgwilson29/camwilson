@@ -11,6 +11,18 @@ export type SectionId =
   | 'breweries'
   | 'space';
 
+export interface TimelineEntry {
+  title: string;
+  /** Muted line under the title, e.g. a school or year. */
+  meta?: string;
+  note?: string;
+  /** Highlights the entry as ongoing. */
+  current?: boolean;
+}
+
+/** A plain bullet, or a labeled bullet with a timeline nested under it (newest first). */
+export type HighlightItem = string | { label: string; timeline: TimelineEntry[] };
+
 export interface EducationEntry {
   credential: string;
   school: string;
@@ -28,7 +40,7 @@ export interface Section {
   tagline: string;
   paragraphs: string[];
   highlightsTitle?: string;
-  highlights?: string[];
+  highlights?: HighlightItem[];
   /** Additional titled bullet lists shown after the highlights. */
   extraLists?: { title: string; items: string[] }[];
   links?: { label: string; href: string }[];
@@ -111,7 +123,24 @@ export const sections: Section[] = [
       'I have always loved cars — the engineering, the design, and the feeling of a great driving road.',
     ],
     highlightsTitle: 'Garage & favorites',
-    highlights: ['Current car: 2024 Chevrolet Silverado EV RST', 'Prior cars: 2021 Dodge Challenger Scat Pack Widebody, 2021 Ram 1500 Limited, 2017 Dodge Challenger Scat Pack, 2016 Ford Explorer, 2015 Chevrolet Camaro 2SS, 2013 Chrysler 300 Limited, 2001 Isuzu Rodeo, and a 1998 Ram 3500 dually', 'Dream car: RestoMod 1972 Dodge Challenger R/T in Plum Crazy Purple (with the Helephant engine!)', 'Favorite drive: Any roadtrip, especially into the mountains!'],
+    highlights: [
+      'Current car: 2024 Chevrolet Silverado EV RST',
+      {
+        label: 'Prior cars:',
+        timeline: [
+          { title: 'Dodge Challenger Scat Pack Widebody', meta: '2021' },
+          { title: 'Ram 1500 Limited', meta: '2021' },
+          { title: 'Dodge Challenger Scat Pack', meta: '2017' },
+          { title: 'Ford Explorer', meta: '2016' },
+          { title: 'Chevrolet Camaro 2SS', meta: '2015' },
+          { title: 'Chrysler 300 Limited', meta: '2013' },
+          { title: 'Isuzu Rodeo', meta: '2001' },
+          { title: 'Ram 3500 Dually', meta: '1998' },
+        ],
+      },
+      'Dream car: RestoMod 1972 Dodge Challenger R/T in Plum Crazy Purple (with the Helephant engine!)',
+      'Favorite drive: Any roadtrip, especially into the mountains!',
+    ],
   },
   {
     id: 'motorcycles',
@@ -120,7 +149,19 @@ export const sections: Section[] = [
     tagline: 'Two wheels, fast orbits',
     paragraphs: ['Riding is my way to clear my head and connect with the road.'],
     highlightsTitle: 'Rides',
-    highlights: ['Current bike: 2019 BMW S1000XR', 'Prior bikes: 2019 Kawasaki Z900, 2016 Kawasaki ZX-10R, 2015 Kawasaki ZX-6R', 'Favorite route: San Juan Skyway from Durango to Ouray, CO', 'Dream Roadtrip: Up the Pacific Coast Highway from Los Angeles to Vancouver'],
+    highlights: [
+      'Current bike: 2019 BMW S1000XR',
+      {
+        label: 'Prior bikes:',
+        timeline: [
+          { title: 'Kawasaki Z900', meta: '2019' },
+          { title: 'Kawasaki ZX-10R', meta: '2016' },
+          { title: 'Kawasaki ZX-6R', meta: '2015' },
+        ],
+      },
+      'Favorite route: San Juan Skyway from Durango to Ouray, CO',
+      'Dream Roadtrip: Up the Pacific Coast Highway from Los Angeles to Vancouver',
+    ],
   },
   {
     id: 'outdoors',
@@ -161,7 +202,7 @@ export const sections: Section[] = [
     highlightsTitle: 'On tap',
     highlights: [
       'Favorite style: English Style Bitter, Brown Ale, Festbier/Märzen',
-      'Favorite brewery: First Magnitude Brewing (regional), Veterans United (local), and Ayinger (international)',
+      'Favorite brewery: Veterans United (local), First Magnitude Brewing (regional), and Ayinger (international)',
       'Best beer found while traveling: Estrella 1906 Reserva, A Coruña, ES',
     ],
   },

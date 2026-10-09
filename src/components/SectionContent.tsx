@@ -1,4 +1,5 @@
 import type { Section } from '../data/sections';
+import { Timeline } from './Timeline';
 
 export function SectionContent({ section, headingLevel = 2 }: { section: Section; headingLevel?: 1 | 2 }) {
   const Heading = headingLevel === 1 ? 'h1' : 'h2';
@@ -16,9 +17,16 @@ export function SectionContent({ section, headingLevel = 2 }: { section: Section
         <>
           <h3>{section.highlightsTitle ?? 'Highlights'}</h3>
           <ul>
-            {section.highlights.map((h, i) => (
-              <li key={i}>{h}</li>
-            ))}
+            {section.highlights.map((h, i) =>
+              typeof h === 'string' ? (
+                <li key={i}>{h}</li>
+              ) : (
+                <li key={i}>
+                  {h.label}
+                  <Timeline entries={h.timeline} compact />
+                </li>
+              ),
+            )}
           </ul>
         </>
       )}
@@ -35,21 +43,14 @@ export function SectionContent({ section, headingLevel = 2 }: { section: Section
       {section.education && (
         <>
           <h3>Education</h3>
-          <ol className="education">
-            {section.education.map((e, i) => (
-              <li key={i} className={`education__item${e.current ? ' education__item--current' : ''}`}>
-                <span className="education__credential">
-                  {e.credential}
-                  {e.current && <span className="education__badge">In progress</span>}
-                </span>
-                <span className="education__meta">
-                  {e.school}
-                  {e.years && ` · ${e.years}`}
-                </span>
-                {e.note && <span className="education__note">{e.note}</span>}
-              </li>
-            ))}
-          </ol>
+          <Timeline
+            entries={section.education.map((e) => ({
+              title: e.credential,
+              meta: e.years ? `${e.school} · ${e.years}` : e.school,
+              note: e.note,
+              current: e.current,
+            }))}
+          />
         </>
       )}
       {section.links && (

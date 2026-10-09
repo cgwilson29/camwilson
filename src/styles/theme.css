@@ -377,21 +377,30 @@ button {
   margin-top: 20px;
 }
 
-.education {
+.timeline {
   list-style: none;
   margin: 0;
   padding: 0 0 0 18px;
   border-left: 1px solid var(--border);
 }
 
-.education__item {
+.section-content .timeline__item {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 0 16px;
 }
 
-.education__item::before {
+/* Nested inside a highlights bullet (e.g. prior cars). */
+.timeline--compact {
+  margin: 8px 0 4px;
+}
+
+.section-content .timeline--compact .timeline__item {
+  margin-bottom: 8px;
+}
+
+.timeline__item::before {
   content: '';
   position: absolute;
   left: -23px;
@@ -402,16 +411,16 @@ button {
   background: var(--muted);
 }
 
-.education__item--current::before {
+.timeline__item--current::before {
   background: var(--accent);
   box-shadow: 0 0 8px var(--accent);
 }
 
-.education__credential {
+.timeline__title {
   font-weight: 600;
 }
 
-.education__badge {
+.timeline__badge {
   margin-left: 8px;
   padding: 1px 8px;
   border-radius: 999px;
@@ -425,12 +434,12 @@ button {
   background: var(--accent);
 }
 
-.education__meta {
+.timeline__meta {
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-.education__note {
+.timeline__note {
   margin-top: 4px;
   font-size: 0.9rem;
 }
