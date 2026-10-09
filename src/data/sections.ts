@@ -3,6 +3,7 @@
 export type SectionId =
   | 'about'
   | 'work'
+  | 'family'
   | 'cars'
   | 'motorcycles'
   | 'kayaking'
@@ -57,6 +58,18 @@ export const sections: Section[] = [
     ],
   },
   {
+    id: 'family',
+    title: 'Family',
+    body: 'Venus',
+    tagline: 'My wife and our pets',
+    paragraphs: [
+      "Home base is wherever my wife and our pets are. Caroline and I met in 2007 while in undergrad at UCF, before going our separate ways to pursue our dreams. We reconnected in 2021 and found ourselves in love all over again, and ultimately tied the knot in 2025! We are now each other's travel and brewery companions, and I wouldn't change a thing about it.",
+      'Our pets are a weird mix, but we love them all!',
+    ],
+    highlightsTitle: 'The crew',
+    highlights: ['Wife: Caroline, dearest human', 'Pet: Larry, awkward Chow/Pit/Lab puppers', 'Pet: Luna, queen-of-the-castle Bombay cat'],
+  },
+  {
     id: 'cars',
     title: 'Cars',
     body: 'Mars',
@@ -94,7 +107,7 @@ export const sections: Section[] = [
       'Travel has taken me to places that changed how I see the world. Like Jupiter and its many moons, there is always another destination to explore.',
     ],
     highlightsTitle: 'Places I have been',
-    highlights: ['Ireland', 'Colombia', 'Spain', 'Dominican Republic', 'Canada', 'Aruba', ''],
+    highlights: ['Ireland', 'Colombia', 'Spain', 'Dominican Republic', 'Canada', 'Aruba', 'British Virgin Islands', 'St. Maarten'],
   },
   {
     id: 'space',
