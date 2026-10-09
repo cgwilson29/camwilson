@@ -8,7 +8,8 @@
   --accent: #ffbb44;
   --accent-2: #7aa7ff;
   --radius: 14px;
-  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font: 'Exo 2', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Orbitron', 'Exo 2', system-ui, sans-serif;
   color-scheme: dark;
 }
 
@@ -65,6 +66,7 @@ button {
   display: grid;
   place-items: center;
   color: var(--muted);
+  font-family: var(--font-display);
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -81,9 +83,12 @@ button {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 0 24px rgba(122, 167, 255, 0.35);
 }
 
 .hero p {
@@ -94,6 +99,7 @@ button {
 .hero .hero__hint {
   margin-top: 10px;
   font-size: 0.85rem;
+  letter-spacing: 0.06em;
   opacity: 0.75;
 }
 
@@ -111,14 +117,16 @@ button {
 }
 
 .planet-label__name {
-  font-size: 11px;
+  font-family: var(--font-display);
+  font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .planet-label__section {
-  font-size: 13px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   font-weight: 600;
   color: var(--text);
 }
@@ -150,9 +158,11 @@ button {
 
 .navbar__brand {
   color: var(--text);
+  font-family: var(--font-display);
   font-weight: 700;
   text-decoration: none;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   flex-shrink: 0;
 }
 
@@ -172,8 +182,17 @@ button {
   border-radius: 999px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .navbar__links a {
+    padding: 5px 7px;
+    font-size: 0.82rem;
+  }
 }
 
 .navbar__links a:hover,
@@ -287,16 +306,20 @@ button {
 
 .section-content__body {
   margin: 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
 .section-content__title {
   margin: 2px 0 0;
-  font-size: 1.8rem;
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
 }
 
 .section-content__tagline {
@@ -306,7 +329,11 @@ button {
 
 .section-content h3 {
   margin: 22px 0 6px;
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--accent-2);
 }
 
@@ -324,6 +351,64 @@ button {
   flex-wrap: wrap;
   gap: 8px 16px;
   margin-top: 20px;
+}
+
+.education {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 18px;
+  border-left: 1px solid var(--border);
+}
+
+.education__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px;
+}
+
+.education__item::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.education__item--current::before {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.education__credential {
+  font-weight: 600;
+}
+
+.education__badge {
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+  color: var(--bg);
+  background: var(--accent);
+}
+
+.education__meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.education__note {
+  margin-top: 4px;
+  font-size: 0.9rem;
 }
 
 /* ---------- Plain sections page ---------- */

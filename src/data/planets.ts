@@ -25,6 +25,6 @@ export const planets: PlanetConfig[] = [
   { name: 'Mars', radius: 0.45, orbitRadius: 11.8, orbitSpeed: 0.15, spinSpeed: 0.48, tilt: 0.44, colors: ['#c1440e', '#8a2f0a', '#e07a4a'], style: 'rocky', sectionId: 'cars' },
   { name: 'Jupiter', radius: 1.5, orbitRadius: 16, orbitSpeed: 0.08, spinSpeed: 0.9, tilt: 0.05, colors: ['#d8b48a', '#a8774f', '#f0e0c8', '#c48a5a'], style: 'banded', sectionId: 'travel' },
   { name: 'Saturn', radius: 1.25, orbitRadius: 21, orbitSpeed: 0.06, spinSpeed: 0.8, tilt: 0.47, colors: ['#e6d3a3', '#c8a96e', '#f5ead0'], style: 'banded', sectionId: 'space', rings: { inner: 1.6, outer: 2.6, color: '#d9c79c' } },
-  { name: 'Uranus', radius: 0.9, orbitRadius: 25.5, orbitSpeed: 0.045, spinSpeed: 0.6, tilt: 1.71, colors: ['#9fe3e8', '#7ccbd3', '#c4f1f4'], style: 'banded' },
-  { name: 'Neptune', radius: 0.88, orbitRadius: 29.5, orbitSpeed: 0.035, spinSpeed: 0.62, tilt: 0.49, colors: ['#3557d4', '#2340a8', '#5b7cf0'], style: 'banded', sectionId: 'kayaking' },
+  { name: 'Uranus', radius: 0.9, orbitRadius: 25.5, orbitSpeed: 0.045, spinSpeed: 0.6, tilt: 1.71, colors: ['#9fe3e8', '#7ccbd3', '#c4f1f4'], style: 'banded', sectionId: 'breweries' },
+  { name: 'Neptune', radius: 0.88, orbitRadius: 29.5, orbitSpeed: 0.035, spinSpeed: 0.62, tilt: 0.49, colors: ['#3557d4', '#2340a8', '#5b7cf0'], style: 'banded', sectionId: 'outdoors' },
 ];

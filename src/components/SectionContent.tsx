@@ -22,6 +22,26 @@ export function SectionContent({ section, headingLevel = 2 }: { section: Section
           </ul>
         </>
       )}
+      {section.education && (
+        <>
+          <h3>Education</h3>
+          <ol className="education">
+            {section.education.map((e, i) => (
+              <li key={i} className={`education__item${e.current ? ' education__item--current' : ''}`}>
+                <span className="education__credential">
+                  {e.credential}
+                  {e.current && <span className="education__badge">In progress</span>}
+                </span>
+                <span className="education__meta">
+                  {e.school}
+                  {e.years && ` · ${e.years}`}
+                </span>
+                {e.note && <span className="education__note">{e.note}</span>}
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
       {section.links && (
         <p className="section-content__links">
           {section.links.map((l) => (

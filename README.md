@@ -10,11 +10,13 @@ A React + TypeScript + Vite site whose homepage is an interactive 3D solar syste
 |---|---|
 | Sun | About Cam |
 | Earth | Work (USPHS / FDA OCE Project Facilitate) |
+| Venus | Family |
 | Mars | Cars |
 | Mercury | Motorcycles |
-| Neptune | Kayaking |
+| Neptune | Nature/Outdoors |
 | Jupiter | World Travels |
 | Saturn | Space & Astronomy |
+| Uranus | Craft Beer & Breweries |
 
 ## Editing content
 All copy lives in [`src/data/sections.ts`](src/data/sections.ts). Planet sizes, orbits,
