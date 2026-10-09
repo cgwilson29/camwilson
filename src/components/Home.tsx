@@ -31,6 +31,9 @@ export function Home() {
           <p className="hero__hint">Click a planet to explore · drag to rotate · scroll to zoom</p>
         </div>
       )}
+      <a className="credit" href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noreferrer">
+        Imagery: Solar System Scope · CC BY 4.0
+      </a>
       {selected && <SectionPanel id={selected} onClose={() => select(null)} onSelect={select} />}
     </div>
   );

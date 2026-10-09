@@ -49,6 +49,11 @@ export function CameraRig({ selected, panel }: { selected: SectionId | null; pan
         .addScaledVector(outward, pos.lengthSq() > 0 ? -dist * 0.45 : dist)
         .addScaledVector(side, dist * 0.85)
         .addScaledVector(UP, dist * 0.3);
+      // Never park the camera inside the sun's glow shell (matters for Mercury's tight orbit).
+      const minFromSun = SUN_RADIUS * 1.7 + 1.5;
+      if (pos.lengthSq() > 0 && desiredPos.current.length() < minFromSun) {
+        desiredPos.current.setLength(minFromSun);
+      }
       desiredTarget.current.copy(pos);
       // Shift the body off screen center so the panel doesn't cover it.
       const forward = desiredTarget.current.clone().sub(desiredPos.current).normalize();

@@ -22,6 +22,10 @@ A React + TypeScript + Vite site whose homepage is an interactive 3D solar syste
 All copy lives in [`src/data/sections.ts`](src/data/sections.ts). Planet sizes, orbits,
 colors, and which section each planet links to are in [`src/data/planets.ts`](src/data/planets.ts).
 
+## Credits
+Planet and sun imagery from [Solar System Scope](https://www.solarsystemscope.com/textures/)
+(CC BY 4.0), based on NASA mission data. Files live in `public/textures/`.
+
 ## Development
 ```bash
 npm install

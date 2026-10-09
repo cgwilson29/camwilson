@@ -103,6 +103,30 @@ button {
   opacity: 0.75;
 }
 
+/* Attribution required by the CC BY 4.0 texture license. */
+.credit {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  z-index: 5;
+  font-size: 0.7rem;
+  color: var(--muted);
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.credit:hover {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .credit {
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+
 /* ---------- Planet labels (drei <Html>) ---------- */
 
 .planet-label {

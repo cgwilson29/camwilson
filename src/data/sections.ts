@@ -140,7 +140,7 @@ export const sections: Section[] = [
       'Travel has taken me to places that changed how I see the world. Like Jupiter and its many moons, there is always another destination to explore.',
     ],
     highlightsTitle: 'Places I have been',
-    highlights: ['Ireland', 'Colombia', 'Spain', 'Dominican Republic', 'Canada', 'Aruba', 'British Virgin Islands', 'St. Maarten'],
+    highlights: ['Ireland', 'Colombia', 'Spain', 'Dominican Republic', 'Canada', 'Aruba', 'British Virgin Islands', 'St. Maarten', 'Bahamas'],
   },
   {
     id: 'breweries',
@@ -152,7 +152,7 @@ export const sections: Section[] = [
     ],
     highlightsTitle: 'On tap',
     highlights: [
-      'Favorite style: English Style Bitter (ESB), Brown Ale, Festbier/Märzen',
+      'Favorite style: English Style Bitter, Brown Ale, Festbier/Märzen',
       'Favorite brewery: First Magnitude Brewing (regional), Veterans United (local), and Ayinger (international)',
       'Best beer found while traveling: Estrella 1906 Reserva, A Coruña, ES',
     ],
@@ -161,15 +161,15 @@ export const sections: Section[] = [
     id: 'space',
     title: 'Space & Astronomy',
     body: 'Saturn',
-    tagline: 'Looking up',
+    tagline: 'ad astra per aspera',
     paragraphs: [
       'Space is what inspired this site. I love following missions, learning about the cosmos, and stargazing whenever the skies are clear.',
     ],
     highlightsTitle: 'Favorites',
     highlights: [
-      'Favorite mission: James-Webb Space Telescope',
-      'Favorite object: 40 Eridani System (the home of Vulcan)',
-      'Telescope / gear: Celestron AstroMaster 130 (it gets the job done!)',
+      'Favorite missions: James Webb Space Telescope and the new Nancy Grace Roman Space Telescope',
+      'Favorite object: 40 Eridani System (the home of Vulcan [Star Trek], Erid [Project Hail Mary], and Vulcan & Romulus [Bobiverse])',
+      'Telescope / gear: Celestron AstroMaster 130 (it gets the job done!), but I would love to get into astrophotography one day',
     ],
     links: [{ label: 'NASA', href: 'https://www.nasa.gov/' }],
   },
